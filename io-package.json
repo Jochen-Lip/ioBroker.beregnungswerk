@@ -1,0 +1,134 @@
+{
+  "common": {
+    "name": "beregnungswerk",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Professional namespace beregnungswerk.0",
+        "de": "Professioneller Namespace beregnungswerk.0"
+      }
+    },
+    "titleLang": {
+      "en": "beregnungswerk",
+      "de": "beregnungswerk"
+    },
+    "desc": {
+      "en": "Irrigation control for up to 4 valves",
+      "de": "Beregnungssteuerung für bis zu 4 Ventile"
+    },
+    "authors": [
+      "Jochen-Lip <jochen.lip@gmail.com>"
+    ],
+    "keywords": [
+      "garden",
+      "irrigation",
+      "beregnung"
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "beregnungswerk.png",
+    "enabled": true,
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "garden",
+    "compact": false,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "eraseOnUpload": true,
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.0.23"
+      }
+    ],
+    "installedFrom": "/opt/ioBroker.beregnungswerk"
+  },
+  "native": {
+    "events": [
+      {
+        "enabled": true,
+        "sprinkleName": "Ventil1",
+        "name": "shelly.1.SHSW-44#849F4C#1.Relay0.Switch",
+        "wateringTime": 20,
+        "methodControlSM": "calculation"
+      },
+      {
+        "enabled": true,
+        "sprinkleName": "Ventil2",
+        "name": "shelly.1.SHSW-44#849F4C#1.Relay1.Switch",
+        "wateringTime": 20,
+        "methodControlSM": "calculation"
+      },
+      {
+        "enabled": true,
+        "sprinkleName": "Ventil3",
+        "name": "shelly.1.SHSW-44#849F4C#1.Relay2.Switch",
+        "wateringTime": 20,
+        "methodControlSM": "calculation"
+      },
+      {
+        "enabled": true,
+        "sprinkleName": "Ventil4",
+        "name": "shelly.1.SHSW-44#849F4C#1.Relay3.Switch",
+        "wateringTime": 20,
+        "methodControlSM": "calculation"
+      }
+    ],
+    "tankEnabled": false,
+    "tankLevelSensor": "",
+    "tankPump": "",
+    "tankMinLevel": 20,
+    "tankOnLevel": 40,
+    "tankMaxLevel": 95
+  },
+  "objects": [],
+  "instanceObjects": [
+    { "id": "Steuerung", "type": "channel", "common": { "name": "Steuerung" } },
+    { "id": "Steuerung.Zeitschaltuhr", "type": "channel", "common": { "name": "Zeitschaltuhr" } },
+    { "id": "Steuerung.Wetterdaten", "type": "channel", "common": { "name": "Wetterdaten" } },
+    { "id": "Steuerung.Wetterdaten.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "Steuerung.Wetterdaten.Messwerte", "type": "channel", "common": { "name": "Messwerte" } },
+    { "id": "Steuerung.Wetterdaten.Schwelle", "type": "channel", "common": { "name": "Schwelle" } },
+    { "id": "SchleifenSteuerung", "type": "channel", "common": { "name": "SchleifenSteuerung" } },
+    { "id": "WassertankSteuerung", "type": "channel", "common": { "name": "WassertankSteuerung" } },
+    { "id": "WassertankSteuerung.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "WassertankSteuerung.Anzeigen", "type": "channel", "common": { "name": "Anzeigen" } },
+    { "id": "GartenpumpeSteuerung", "type": "channel", "common": { "name": "GartenpumpeSteuerung" } },
+    { "id": "GartenpumpeSteuerung.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "GartenpumpeSteuerung.Anzeigen", "type": "channel", "common": { "name": "Anzeigen" } },
+    { "id": "Nachrichten", "type": "channel", "common": { "name": "Nachrichten" } },
+    { "id": "Nachrichten.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "Nachrichten.Anzeigen", "type": "channel", "common": { "name": "Anzeigen" } },
+    { "id": "Ventil1", "type": "channel", "common": { "name": "Ventil 1" } },
+    { "id": "Ventil1.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "Ventil1.Steuerung", "type": "channel", "common": { "name": "Steuerung" } },
+    { "id": "Ventil1.Messwerte", "type": "channel", "common": { "name": "Messwerte" } },
+    { "id": "Ventil1.Schwelle", "type": "channel", "common": { "name": "Schwelle" } },
+    { "id": "Ventil2", "type": "channel", "common": { "name": "Ventil 2" } },
+    { "id": "Ventil2.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "Ventil2.Steuerung", "type": "channel", "common": { "name": "Steuerung" } },
+    { "id": "Ventil2.Messwerte", "type": "channel", "common": { "name": "Messwerte" } },
+    { "id": "Ventil2.Schwelle", "type": "channel", "common": { "name": "Schwelle" } },
+    { "id": "Ventil3", "type": "channel", "common": { "name": "Ventil 3" } },
+    { "id": "Ventil3.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "Ventil3.Steuerung", "type": "channel", "common": { "name": "Steuerung" } },
+    { "id": "Ventil3.Messwerte", "type": "channel", "common": { "name": "Messwerte" } },
+    { "id": "Ventil3.Schwelle", "type": "channel", "common": { "name": "Schwelle" } },
+    { "id": "Ventil4", "type": "channel", "common": { "name": "Ventil 4" } },
+    { "id": "Ventil4.Konfig", "type": "channel", "common": { "name": "Konfig" } },
+    { "id": "Ventil4.Steuerung", "type": "channel", "common": { "name": "Steuerung" } },
+    { "id": "Ventil4.Messwerte", "type": "channel", "common": { "name": "Messwerte" } },
+    { "id": "Ventil4.Schwelle", "type": "channel", "common": { "name": "Schwelle" } }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+    "type": "tabs",
+    "items": {
+        "tabSettings": {
+            "type": "panel",
+            "label": {
+                "en": "Main settings",
+                "de": "Haupteinstellungen"
+            },
+            "items": {
+                "_h1": {
+                    "type": "header",
+                    "text": {
+                        "en": "Sprinkler control",
+                        "de": "Sprinklersteuerung"
+                    },
+                    "size": "h6",
+                    "sm": 12
+                },
+                "events": {
+                    "type": "table",
+                    "sm": 12,
+                    "items": [
+                        {
+                            "type": "checkbox",
+                            "attr": "enabled",
+                            "title": {
+                                "en": "active",
+                                "de": "aktiv"
+                            },
+                            "width": 70,
+                            "default": true
+                        },
+                        {
+                            "type": "text",
+                            "attr": "sprinkleName",
+                            "title": {
+                                "en": "Name",
+                                "de": "Name"
+                            },
+                            "width": "20%"
+                        },
+                        {
+                            "type": "objectId",
+                            "attr": "name",
+                            "title": {
+                                "en": "Object-ID sprinkler",
+                                "de": "Objekt-ID-Sprinkler"
+                            },
+                            "width": "25%"
+                        },
+                        {
+                            "type": "number",
+                            "attr": "wateringTime",
+                            "title": {
+                                "en": "wateringTime",
+                                "de": "Bewässerungszeit (Min.)"
+                            },
+                            "hidden": true,
+                            "min": 5,
+                            "max": 90,
+                            "default": 20
+                        },
+                        {
+                            "type": "select",
+                            "attr": "methodControlSM",
+                            "title": {
+                                "en": "Control method",
+                                "de": "Steuerungsmethode"
+                            },
+                            "hidden": true,
+                            "default": "calculation",
+                            "options": [
+                                {
+                                    "value": "calculation",
+                                    "label": {
+                                        "de": "Verdunstungsberechnung",
+                                        "en": "Evaporation"
+                                    }
+                                },
+                                {
+                                    "value": "fixDay",
+                                    "label": {
+                                        "de": "Feste Wochentage",
+                                        "en": "Fixed days"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "tabPump": {
+            "type": "panel",
+            "label": {
+                "en": "Pump settings",
+                "de": "Pumpeneinstellungen"
+            },
+            "items": {
+                "_info": {
+                    "type": "staticText",
+                    "text": {
+                        "de": "Wird im nächsten Schritt ergänzt.",
+                        "en": "Coming next."
+                    },
+                    "sm": 12
+                }
+            }
+        },
+        "tabTank": {
+            "type": "panel",
+            "label": {
+                "en": "Tank control",
+                "de": "Tanksteuerung"
+            },
+            "items": {
+                "_hTank": {
+                    "type": "header",
+                    "text": {
+                        "en": "Tank control",
+                        "de": "Tanksteuerung"
+                    },
+                    "size": "h6",
+                    "sm": 12
+                },
+                "tankEnabled": {
+                    "type": "checkbox",
+                    "label": {
+                        "en": "Enable tank control",
+                        "de": "Tanksteuerung aktiv"
+                    },
+                    "sm": 12
+                },
+                "tankLevelSensor": {
+                    "type": "objectId",
+                    "label": {
+                        "en": "Fill level sensor (0–100%)",
+                        "de": "Füllstandssensor (0–100%)"
+                    },
+                    "sm": 6
+                },
+                "tankPump": {
+                    "type": "objectId",
+                    "label": {
+                        "en": "Tank pump",
+                        "de": "Tankpumpe"
+                    },
+                    "sm": 6
+                },
+                "tankMinLevel": {
+                    "type": "number",
+                    "label": {
+                        "en": "Minimum level (%)",
+                        "de": "Mindestfüllstand (%)"
+                    },
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "sm": 4
+                },
+                "tankOnLevel": {
+                    "type": "number",
+                    "label": {
+                        "en": "Switch-on level (%)",
+                        "de": "Einschaltfüllstand (%)"
+                    },
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "sm": 4
+                },
+                "tankMaxLevel": {
+                    "type": "number",
+                    "label": {
+                        "en": "Maximum level (%)",
+                        "de": "Maximalfüllstand (%)"
+                    },
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "sm": 4
+                }
+            }
+        },
+        "tabTime": {
+            "type": "panel",
+            "label": {
+                "en": "Time settings",
+                "de": "Zeit Einstellungen"
+            },
+            "items": {
+                "_info": {
+                    "type": "staticText",
+                    "text": {
+                        "de": "Wird im nächsten Schritt ergänzt.",
+                        "en": "Coming next."
+                    },
+                    "sm": 12
+                }
+            }
+        },
+        "tabExtra": {
+            "type": "panel",
+            "label": {
+                "en": "Extra settings",
+                "de": "Zusätzliche Einstellungen"
+            },
+            "items": {
+                "_info": {
+                    "type": "staticText",
+                    "text": {
+                        "de": "Wird im nächsten Schritt ergänzt.",
+                        "en": "Coming next."
+                    },
+                    "sm": 12
+                }
+            }
+        }
+    }
+}
